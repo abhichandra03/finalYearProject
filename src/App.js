@@ -40,19 +40,19 @@ const App = () => {
   console.log(light);
   return (
     <div className="overflow-y-hidden">
-      <div className="bg-gray-800 flex-col w-screen h-full py-10">
+      <div className="bg-zinc-200 flex-col w-screen h-full py-10">
         <div className="flex flex-col items-center justify-center h-full">
-          <h1 className="text-white text-4xl">CROP MONITORING SYSTEM</h1>
+          <h1 className="text-emerald-900 text-4xl">CROP MONITORING SYSTEM</h1>
         </div>
         <div className="flex flex-col items-center justify-center h-full my-10">
-          <h1 className="text-white text-2xl">Light</h1>
+          <h1 className="text-emerald-900 text-2xl">Light</h1>
           <div className="flex items-center">
-            <p className="mr-5 text-2xl">Current value</p>
-            <div className="box-border h-32 w-32 p-2 items-center text-2xl border-2 justify-start ...">
-              {light && <p>{light[49].y}%</p>}
+            <div className="box-border h-350 w-25 p-2 items-center text-2xl border-gray-500 border-2 justify-start ...">
+            <p className="mr-5 text-2xl text-emerald-900">Current value</p>
+              {light && <p className="text-center">{light[49].y}%</p>}
             </div>
             <LineChart width={1200} height={300} data={light}>
-              <Line type="monotone" dataKey="y" stroke="#8884d8" />
+              <Line type="monotone" dataKey="y" stroke="#7f00ff" />
               <CartesianGrid stroke="#ccc" />
               <XAxis dataKey="x" />
               <YAxis />
@@ -60,11 +60,11 @@ const App = () => {
           </div>
         </div>
         <div className="flex flex-col items-center justify-center h-full my-10">
-          <h1 className="text-white text-2xl">Temperature</h1>
+          <h1 className="text-emerald-900 text-2xl">Temperature</h1>
           <div className="flex items-center">
-            <p className="mr-5 text-2xl">Current value</p>
-            <div className="box-border h-32 w-32 p-2 text-2xl border-2 justify-start ...">
-              {temp && <p>{temp[49].y}%</p>}
+            <div className="box-border h-350 w-25 p-2 text-2xl border-2 border-gray-500 justify-start ...">
+            <p className="mr-5 text-2xl text-emerald-900">Current Value</p>
+                    {temp && <p className="text-center">{temp[49].y}%</p>}
             </div>
             <LineChart width={1200} height={300} data={temp}>
               <Line type="monotone" dataKey="y" stroke="#8884d8" />
@@ -75,15 +75,15 @@ const App = () => {
           </div>
         </div>
         <div className="flex flex-col items-center justify-center h-full my-10">
-          <h1 className="text-white text-2xl">Humidity</h1>
+          <h1 className="text-emerald-900 text-2xl">Humidity</h1>
 
           <div className="flex items-center">
-            <p className="mr-5 text-2xl">Current value</p>
-            <div className="box-border h-32 w-32 p-2 text-2xl border-2 justify-start ...">
-              {humidity && <p>{humidity[49].y}%</p>}
+            <div className="box-border h-350 w-25 p-2 text-2xl border-2 border-gray-500 justify-start ...">
+            <p className="mr-5 text-2xl text-emerald-900">Current value</p>
+              {humidity && <p className="text-center">{humidity[49].y}%</p>}
             </div>
             <LineChart width={1200} height={300} data={humidity}>
-              <Line type="monotone" dataKey="y" stroke="#8884d8" />
+              <Line type="monotone" dataKey="y" stroke="#51087E" />
               <CartesianGrid stroke="#ccc" />
               <XAxis dataKey="x" />
               <YAxis />
@@ -91,14 +91,14 @@ const App = () => {
           </div>
         </div>
         <div className="flex flex-col items-center justify-center h-full my-10">
-          <h1 className="text-white text-2xl">Moisture</h1>
+          <h1 className="text-emerald-900 text-2xl">Moisture</h1>
           <div className="flex items-center">
-            <p className="mr-5 text-2xl">Current value</p>
-            <div className="box-border h-32 w-32 p-2 text-2xl border-2 justify-start ...">
-              {moisture && <p>{moisture[49].y}%</p>}
+            <div className="box-border h-350 w-25 p-2 text-2xl border-2 border-gray-500 justify-start ...">
+            <p className="mr-6 text-2xl text-emerald-900">Current value</p>
+              {moisture && <p className="text-center">{moisture[49].y}%</p>}
             </div>
             <LineChart width={1200} height={300} data={moisture}>
-              <Line type="monotone" dataKey="y" stroke="#8884d8" />
+              <Line type="monotone" dataKey="y" stroke="#A020F0" />
               <CartesianGrid stroke="#ccc" />
               <XAxis dataKey="x" />
               <YAxis />
@@ -109,5 +109,4 @@ const App = () => {
     </div>
   );
 };
-
 export default App;
