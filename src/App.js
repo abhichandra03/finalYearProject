@@ -38,32 +38,51 @@ const App = () => {
       .catch((error) => console.error(error));
   }, []);
   return (
-    <div>
-      <LineChart width={1200} height={300} data={light}>
-        <Line type="monotone" dataKey="y" stroke="#8884d8" />
-        <CartesianGrid stroke="#ccc" />
-        <XAxis dataKey="x" />
-        <YAxis />
-      </LineChart>
-      <LineChart width={1200} height={300} data={temp}>
-        <Line type="monotone" dataKey="y" stroke="#8884d8" />
-        <CartesianGrid stroke="#ccc" />
-        <XAxis dataKey="x" />
-        <YAxis />
-      </LineChart>
-      <LineChart width={1200} height={300} data={humidity}>
-        <Line type="monotone" dataKey="y" stroke="#8884d8" />
-        <CartesianGrid stroke="#ccc" />
-        <XAxis dataKey="x" />
-        <YAxis />
-      </LineChart>
-      <LineChart width={1200} height={300} data={moisture}>
-        <Line type="monotone" dataKey="y" stroke="#8884d8" />
-        <CartesianGrid stroke="#ccc" />
-        <XAxis dataKey="x" />
-        <YAxis />
-      </LineChart>
+  <div>
+    <div className="bg-gray-800 flex-col w-screen h-full py-10">
+      <div className="flex flex-col items-center justify-center h-full">
+        <h1 className="text-white text-4xl">CROP MONITORING SYSTEM</h1>
+      </div>
+      <div className="flex flex-col items-center justify-center h-full my-2">
+        <h1 className="text-white text-2xl">Light</h1>
+        <div className="box-border h-32 w-32 p-2 border-2 justify-start ...">
+          <LineChart width={1200} height={300} data={light}>
+            <Line type="monotone" dataKey="y" stroke="#8884d8" />
+            <CartesianGrid stroke="#ccc" />
+            <XAxis dataKey="x" />
+            <YAxis />
+          </LineChart>
+        </div>
+      </div>
+      <div className="flex flex-col items-center justify-center h-full my-2">
+        <h1 className="text-white text-2xl">Temperature</h1>
+        <LineChart width={1200} height={300} data={temp}>
+          <Line type="monotone" dataKey="y" stroke="#8884d8" />
+          <CartesianGrid stroke="#ccc" />
+          <XAxis dataKey="x" />
+          <YAxis />
+        </LineChart>
+      </div>
+      <div className="flex flex-col items-center justify-center h-full my-2">
+        <h1 className="text-white text-2xl">Humidity</h1>
+        <LineChart width={1200} height={300} data={humidity}>
+          <Line type="monotone" dataKey="y" stroke="#8884d8" />
+          <CartesianGrid stroke="#ccc" />
+          <XAxis dataKey="x" />
+          <YAxis />
+        </LineChart>
+      </div>
+      <div className="flex flex-col items-center justify-center h-full my-2">
+        <h1 className="text-white text-2xl">Moisture</h1>
+        <LineChart width={1200} height={300} data={moisture}>
+          <Line type="monotone" dataKey="y" stroke="#8884d8" />
+          <CartesianGrid stroke="#ccc" />
+          <XAxis dataKey="x" />
+          <YAxis />
+        </LineChart>
+      </div>
     </div>
+  </div>
   );
 };
 
