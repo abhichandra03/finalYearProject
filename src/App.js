@@ -48,7 +48,7 @@ const App = () => {
           <h1 className="text-emerald-900 text-2xl">Light</h1>
           <div className="flex items-center">
             <div className="box-border h-350 w-25 p-2 items-center text-2xl border-gray-500 border-2 justify-start ...">
-            <p className="mr-5 text-2xl text-emerald-900">Current value</p>
+              <p className="mr-5 text-2xl text-emerald-900">Current value</p>
               {light && <p className="text-center">{light[49].y}%</p>}
             </div>
             <LineChart width={1200} height={300} data={light}>
@@ -63,8 +63,8 @@ const App = () => {
           <h1 className="text-emerald-900 text-2xl">Temperature</h1>
           <div className="flex items-center">
             <div className="box-border h-350 w-25 p-2 text-2xl border-2 border-gray-500 justify-start ...">
-            <p className="mr-5 text-2xl text-emerald-900">Current Value</p>
-                    {temp && <p className="text-center">{temp[49].y}%</p>}
+              <p className="mr-5 text-2xl text-emerald-900">Current Value</p>
+              {temp && <p className="text-center">{temp[49].y}%</p>}
             </div>
             <LineChart width={1200} height={300} data={temp}>
               <Line type="monotone" dataKey="y" stroke="#8884d8" />
@@ -79,7 +79,7 @@ const App = () => {
 
           <div className="flex items-center">
             <div className="box-border h-350 w-25 p-2 text-2xl border-2 border-gray-500 justify-start ...">
-            <p className="mr-5 text-2xl text-emerald-900">Current value</p>
+              <p className="mr-5 text-2xl text-emerald-900">Current value</p>
               {humidity && <p className="text-center">{humidity[49].y}%</p>}
             </div>
             <LineChart width={1200} height={300} data={humidity}>
@@ -91,10 +91,10 @@ const App = () => {
           </div>
         </div>
         <div className="flex flex-col items-center justify-center h-full my-10">
-          <h1 className="text-emerald-900 text-2xl">Moisture</h1>
+          <h1 className="text-emerald-900 text-2xl">Soil Moisture</h1>
           <div className="flex items-center">
             <div className="box-border h-350 w-25 p-2 text-2xl border-2 border-gray-500 justify-start ...">
-            <p className="mr-6 text-2xl text-emerald-900">Current value</p>
+              <p className="mr-6 text-2xl text-emerald-900">Current value</p>
               {moisture && <p className="text-center">{moisture[49].y}%</p>}
             </div>
             <LineChart width={1200} height={300} data={moisture}>
