@@ -2,7 +2,7 @@ from Adafruit_IO import Client
 from flask import Flask, jsonify
 
 app = Flask(__name__)
-aio = Client("abhi1408","aio_UAek026g6eqAA957931HJlMl4MD0") 
+aio = Client("abhi1408","aio_riHj14xSpwSNgraP6Bfmu2OGMIk3") 
 
 @app.route('/')
 def get():
